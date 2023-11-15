@@ -8,7 +8,6 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,7 +34,7 @@ public class SplashScreen extends AppCompatActivity {
         openLogin();
 
         //AGREGAR ANIMACIONES
-        final Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        final Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.bajar);
 
        final  Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.izquierda);
 
