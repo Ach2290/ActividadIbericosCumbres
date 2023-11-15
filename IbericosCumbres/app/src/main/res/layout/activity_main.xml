@@ -21,10 +21,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/usernameInputLogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/v2"
+        app:layout_constraintStart_toEndOf="@id/v1"
         app:layout_constraintTop_toTopOf="@+id/guideline5"
         app:startIconDrawable="@drawable/persona">
 
@@ -37,11 +37,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLogin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/v1"
+        app:layout_constraintEnd_toStartOf="@id/v2"
         app:layout_constraintTop_toBottomOf="@id/usernameInputLogin"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/llave">
@@ -142,6 +142,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.29685363" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

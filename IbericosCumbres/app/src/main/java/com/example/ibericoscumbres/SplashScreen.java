@@ -35,23 +35,28 @@ public class SplashScreen extends AppCompatActivity {
 
         //AGREGAR ANIMACIONES
         final Animation animacion1 = AnimationUtils.loadAnimation(this, R.anim.bajar);
+        final  Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.izquierda);
 
-       final  Animation animacion2 = AnimationUtils.loadAnimation(this, R.anim.izquierda);
+
 
 
 
         cerdito_imageview = findViewById(R.id.cerdito);
         cumbres_imageview = findViewById(R.id.cumbres);
 
-        cerdito_imageview.setAnimation(animacion1);
-        cumbres_imageview.setAnimation(animacion2);
+        cerdito_imageview.startAnimation(animacion1);
+        cumbres_imageview.startAnimation(animacion2);
+
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                cerdito_imageview.setAnimation(animacion1);
-                cumbres_imageview.setAnimation(animacion2);
-                /*Intent siguiente = new Intent(SplashScreen.this, Login.class);
+                cerdito_imageview.startAnimation(animacion1);
+                cumbres_imageview.startAnimation(animacion2);
+
+
+               /* Intent siguiente = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(siguiente);
                 finish();*/
             }
